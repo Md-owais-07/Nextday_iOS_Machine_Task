@@ -55,7 +55,8 @@ extension ProductsListViewController: UITableViewDelegate, UITableViewDataSource
 }
 
 extension UIImageView {
-    func downloaded(from url: URL, contentMode mode: ContentMode = .scaleAspectFit) {
+    func downloaded(from url: URL, contentMode mode: ContentMode = .scaleAspectFit) 
+    {
         contentMode = mode
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard
@@ -69,7 +70,9 @@ extension UIImageView {
             }
         }.resume()
     }
-    func downloaded(from link: String, contentMode mode: ContentMode = .scaleAspectFit) {
+    
+    func downloaded(from link: String, contentMode mode: ContentMode = .scaleAspectFit)
+    {
         guard let url = URL(string: link) else { return }
         downloaded(from: url, contentMode: mode)
     }

@@ -41,16 +41,21 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uWc-Fj-HIr">
-                                <rect key="frame" x="605" y="34.666666666666664" width="30" height="29.999999999999993"/>
+                                <rect key="frame" x="606" y="37" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="brg-MK-0n1"/>
+                                    <constraint firstAttribute="width" constant="25" id="ica-Li-iOS"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemGray3Color"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" backgroundImage="icons8-forward-30 (1)"/>
+                                <state key="normal" image="chevron.forward" catalog="system"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="MTd-3W-iy8" firstAttribute="leading" secondItem="IQG-rw-aDQ" secondAttribute="trailing" constant="20" id="3TR-G4-rTO"/>
                             <constraint firstAttribute="bottom" secondItem="Eew-gc-Nhe" secondAttribute="bottom" id="6iu-S2-0xW"/>
-                            <constraint firstAttribute="trailing" secondItem="uWc-Fj-HIr" secondAttribute="trailing" constant="8" id="BHU-hq-pk7"/>
+                            <constraint firstAttribute="trailing" secondItem="uWc-Fj-HIr" secondAttribute="trailing" constant="12" id="BHU-hq-pk7"/>
                             <constraint firstAttribute="trailing" secondItem="Eew-gc-Nhe" secondAttribute="trailing" id="GUD-7w-OBT"/>
                             <constraint firstItem="uWc-Fj-HIr" firstAttribute="centerY" secondItem="8m3-br-5fP" secondAttribute="centerY" id="OBf-P8-Rw7"/>
                             <constraint firstItem="Eew-gc-Nhe" firstAttribute="leading" secondItem="8m3-br-5fP" secondAttribute="leading" id="bgW-A5-5PI"/>
@@ -79,9 +84,12 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="icons8-forward-30 (1)" width="30" height="30"/>
+        <image name="chevron.forward" catalog="system" width="97" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

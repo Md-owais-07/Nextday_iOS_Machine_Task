@@ -31,7 +31,8 @@ class LoginViewController: UIViewController {
         
     }
     
-    @IBAction func loginButtonpapped(_ sender: UIButton) {
+    @IBAction func loginButtonpapped(_ sender: UIButton) 
+    {
         guard let email = emailTextField.text, !email.isEmpty,
               let password = passwordTextField.text, !password.isEmpty else {
             // Showing an alert if username or password is empty

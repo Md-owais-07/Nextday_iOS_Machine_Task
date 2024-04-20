@@ -406,7 +406,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kaf-F6-FBI">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="98"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Products" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NN3-P6-rc8">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Products" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NN3-P6-rc8">
                                         <rect key="frame" x="40" y="56" width="334" height="21"/>
                                         <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
                                         <nil key="textColor"/>
@@ -468,45 +468,57 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KCf-ix-FAj">
-                                <rect key="frame" x="364" y="48" width="30" height="30"/>
+                                <rect key="frame" x="364" y="45" width="40" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Sge-J8-oUo"/>
-                                    <constraint firstAttribute="width" constant="30" id="uql-AJ-GU3"/>
+                                    <constraint firstAttribute="height" constant="40" id="Sge-J8-oUo"/>
+                                    <constraint firstAttribute="width" constant="40" id="uql-AJ-GU3"/>
                                 </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="heart" catalog="system"/>
+                                <state key="normal" image="heart" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="likeButtonTapped:" destination="XuB-9g-SfA" eventType="touchUpInside" id="pak-rJ-LGB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3d2-1h-Dla">
-                                <rect key="frame" x="20" y="45" width="30" height="30"/>
+                                <rect key="frame" x="10" y="45" width="40" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="LYj-fb-DFw"/>
-                                    <constraint firstAttribute="height" constant="30" id="ZhT-BT-uqi"/>
+                                    <constraint firstAttribute="width" constant="40" id="LYj-fb-DFw"/>
+                                    <constraint firstAttribute="height" constant="40" id="ZhT-BT-uqi"/>
                                 </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" backgroundImage="icons8-back-30"/>
+                                <state key="normal" image="chevron.backward" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButton:" destination="XuB-9g-SfA" eventType="touchUpInside" id="lkj-Wr-U1p"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fkx-JH-0Qh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="fkx-JH-0Qh" firstAttribute="bottom" secondItem="cTz-5b-rKU" secondAttribute="bottom" constant="187" id="48G-N7-ZKr"/>
-                            <constraint firstItem="KCf-ix-FAj" firstAttribute="top" secondItem="fkx-JH-0Qh" secondAttribute="top" id="5HZ-my-KvQ"/>
-                            <constraint firstItem="fkx-JH-0Qh" firstAttribute="trailing" secondItem="KCf-ix-FAj" secondAttribute="trailing" constant="20" id="8Au-xM-EX0"/>
+                            <constraint firstItem="fkx-JH-0Qh" firstAttribute="trailing" secondItem="KCf-ix-FAj" secondAttribute="trailing" constant="10" id="8Au-xM-EX0"/>
                             <constraint firstItem="OFt-c6-2fG" firstAttribute="leading" secondItem="fkx-JH-0Qh" secondAttribute="leading" id="8Gs-yy-2p6"/>
-                            <constraint firstItem="3d2-1h-Dla" firstAttribute="leading" secondItem="fkx-JH-0Qh" secondAttribute="leading" constant="20" id="FAF-ta-WHE"/>
+                            <constraint firstItem="3d2-1h-Dla" firstAttribute="leading" secondItem="fkx-JH-0Qh" secondAttribute="leading" constant="10" id="FAF-ta-WHE"/>
                             <constraint firstItem="3d2-1h-Dla" firstAttribute="top" secondItem="5Yq-t0-KcT" secondAttribute="top" constant="45" id="a4w-Yk-mpT"/>
                             <constraint firstItem="fkx-JH-0Qh" firstAttribute="trailing" secondItem="cTz-5b-rKU" secondAttribute="trailing" constant="10" id="exs-Oz-uqY"/>
                             <constraint firstItem="OFt-c6-2fG" firstAttribute="top" secondItem="5Yq-t0-KcT" secondAttribute="top" id="hK4-d9-XC9"/>
                             <constraint firstItem="cTz-5b-rKU" firstAttribute="top" secondItem="OFt-c6-2fG" secondAttribute="bottom" constant="25" id="hfq-Sd-z8k"/>
                             <constraint firstItem="cTz-5b-rKU" firstAttribute="leading" secondItem="fkx-JH-0Qh" secondAttribute="leading" constant="10" id="j3g-Xr-D3m"/>
+                            <constraint firstItem="KCf-ix-FAj" firstAttribute="top" secondItem="5Yq-t0-KcT" secondAttribute="top" constant="45" id="j5O-Mh-Qea"/>
                             <constraint firstItem="OFt-c6-2fG" firstAttribute="trailing" secondItem="fkx-JH-0Qh" secondAttribute="trailing" id="mqc-s3-ep2"/>
-                            <constraint firstItem="KCf-ix-FAj" firstAttribute="leading" secondItem="3d2-1h-Dla" secondAttribute="trailing" constant="314" id="tv3-Q3-phb"/>
                         </constraints>
                     </view>
                     <size key="freeformSize" width="414" height="896"/>
                     <connections>
                         <outlet property="detailsImage" destination="OFt-c6-2fG" id="99A-H2-w3u"/>
                         <outlet property="detailsText" destination="cTz-5b-rKU" id="lLy-fW-dx8"/>
+                        <outlet property="likeButton" destination="KCf-ix-FAj" id="qH6-w9-wvl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="07d-WR-U8e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -533,10 +545,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <image name="facebook" width="512" height="512"/>
         <image name="google" width="512" height="512"/>
         <image name="heart" catalog="system" width="128" height="107"/>
-        <image name="icons8-back-30" width="30" height="30"/>
         <image name="mic" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
