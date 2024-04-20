@@ -24,22 +24,11 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         styleButton(googleButton)
         styleButton(facebookButton)
-        loginButton.layer.cornerRadius = 20
-        loginButton.clipsToBounds = true
+        cornerRadius(loginButton)
+        gradientColor(loginButton)
+        textFieldStyle(emailView)
+        textFieldStyle(passwordView)
         
-        emailView.layer.cornerRadius = 20
-        emailView.clipsToBounds = true
-        emailView.backgroundColor = UIColor.systemGray.withAlphaComponent(0.3)
-        
-        passwordView.layer.cornerRadius = 20
-        passwordView.clipsToBounds = true
-        passwordView.backgroundColor = UIColor.systemGray.withAlphaComponent(0.3)
-        
-        let colors: [UIColor] = [.blue, .purple, .systemPink]
-        let startPoint = CGPoint(x: 0, y: 0)
-        let endPoint = CGPoint(x: 1, y: 1)
-
-        loginButton.applyGradient(colors: colors, startPoint: startPoint, endPoint: endPoint)
     }
     
     @IBAction func loginButtonpapped(_ sender: UIButton) {
@@ -49,12 +38,11 @@ class LoginViewController: UIViewController {
             showAlert(message: "Please enter email and password.")
             return
         }
-
+        
         ApiManager.shared.registerUser(email: email, password: password) { result in
             switch result {
             case.success(let data):
                 if data != nil {
-                    self.navigationController?.pushViewController(AppController.shared.productsList, animated: true)
                     self.showAlert(message: "Token: \(String(describing: data))")
                     print(data!)
                 }
