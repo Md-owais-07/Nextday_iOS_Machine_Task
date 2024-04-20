@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
@@ -22,6 +22,9 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        hideKeyboardWhenTappedAround()
         styleButton(googleButton)
         styleButton(facebookButton)
         cornerRadius(loginButton)
@@ -33,24 +36,36 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButtonpapped(_ sender: UIButton) 
     {
-        guard let email = emailTextField.text, !email.isEmpty,
-              let password = passwordTextField.text, !password.isEmpty else {
-            // Showing an alert if username or password is empty
-            showAlert(message: "Please enter email and password.")
-            return
-        }
-        
-        ApiManager.shared.registerUser(email: email, password: password) { result in
-            switch result {
-            case.success(let data):
-                if data != nil {
-                    self.showAlert(message: "Token: \(String(describing: data))")
-                    print(data!)
+        if let email = emailTextField.text, let password = passwordTextField.text
+        {
+            if !email.validateEmailId() {
+                openAlert(title: "Alert", message: "Email address not found", alertStyle: .alert, actionTitles: ["Ok"], actionStyles: [.default], actions: [{ _ in
+                    print("Okay clicked!")
+                }])
+            } else if !password.validatePassword(){
+                openAlert(title: "Alert", message: "Password must be at least 1 Alphabet and 1 Number", alertStyle: .alert, actionTitles: ["Ok"], actionStyles: [.default], actions: [{ _ in
+                    print("Okay clicked!")
+                }])
+            } else {
+                ApiManager.shared.registerUser(email: email, password: password) { result in
+                    switch result {
+                    case.success(let data):
+                        if data != nil {
+                            self.showAlert(message: "Token: \(String(describing: data))")
+                            print(data!)
+                        }
+                    case.failure(let error):
+                        self.showAlert(message: "Login failed. Please try again.")
+                        print(error.localizedDescription)
+                    }
                 }
-            case.failure(let error):
-                self.showAlert(message: "Login failed. Please try again.")
-                print(error.localizedDescription)
             }
+        } 
+        else
+        {
+            openAlert(title: "Alert", message: "Please Enter Email and Password.", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{ _ in
+                print("Okay clicked!")
+            }])
         }
     }
     

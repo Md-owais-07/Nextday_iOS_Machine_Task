@@ -16,6 +16,8 @@ class DetailsVC: UIViewController {
     @IBOutlet weak var detailsText: UILabel!
     @IBOutlet weak var likeButton: UIButton!
     
+    var viewModel = ProductsListViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if let imgUrlString = imgPass, let imgUrl = URL(string: imgUrlString)

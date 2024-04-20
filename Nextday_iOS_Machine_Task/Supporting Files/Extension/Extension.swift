@@ -8,7 +8,8 @@
 import UIKit
 
 extension UIView {
-    func applyGradient(colors: [UIColor], startPoint: CGPoint, endPoint: CGPoint) {
+    func applyGradient(colors: [UIColor], startPoint: CGPoint, endPoint: CGPoint) 
+    {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = bounds
         gradientLayer.colors = colors.map { $0.cgColor }
@@ -16,7 +17,8 @@ extension UIView {
         gradientLayer.endPoint = endPoint
         layer.insertSublayer(gradientLayer, at: 0)
     }
-    func styleButton(_ button: UIButton) {
+    func styleButton(_ button: UIButton) 
+    {
         button.layer.borderWidth = 1
         button.layer.cornerRadius = 20
         button.layer.borderColor = UIColor.black.cgColor

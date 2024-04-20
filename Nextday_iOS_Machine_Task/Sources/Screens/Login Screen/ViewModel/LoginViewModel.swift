@@ -8,7 +8,7 @@
 import UIKit
 
 extension LoginViewController {
-    func showAlert(message: String) 
+    func showAlert(message: String)
     {
             let alertController = UIAlertController(title: "Success", message: message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
@@ -23,6 +23,12 @@ extension LoginViewController {
         button.layer.borderWidth = 1
         button.layer.cornerRadius = 20
         button.layer.borderColor = UIColor.black.cgColor
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        textField.resignFirstResponder()
+        return true
     }
     
     func textFieldStyle(_ view: UIView) 
