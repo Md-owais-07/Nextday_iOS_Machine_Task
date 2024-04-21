@@ -51,7 +51,6 @@ class ApiManager {
                 if (httpResponse.statusCode == 200) {
                     let jsonData = try? JSONDecoder().decode([Product].self, from: data)
                     handler(jsonData, nil)
-                    print(jsonData!)
                 } else {
                     handler(nil, "Error!! Handler")
                 }

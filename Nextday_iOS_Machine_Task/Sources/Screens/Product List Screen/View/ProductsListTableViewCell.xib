@@ -27,7 +27,7 @@
                                     <constraint firstAttribute="width" constant="50" id="Kk0-Xi-Sgu"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTd-3W-iy8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTd-3W-iy8">
                                 <rect key="frame" x="86" y="22" width="517" height="55"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                                 <nil key="textColor"/>
@@ -59,6 +59,7 @@
                             <constraint firstAttribute="trailing" secondItem="Eew-gc-Nhe" secondAttribute="trailing" id="GUD-7w-OBT"/>
                             <constraint firstItem="uWc-Fj-HIr" firstAttribute="centerY" secondItem="8m3-br-5fP" secondAttribute="centerY" id="OBf-P8-Rw7"/>
                             <constraint firstItem="Eew-gc-Nhe" firstAttribute="leading" secondItem="8m3-br-5fP" secondAttribute="leading" id="bgW-A5-5PI"/>
+                            <constraint firstItem="MTd-3W-iy8" firstAttribute="centerY" secondItem="8m3-br-5fP" secondAttribute="centerY" id="noH-o3-zFo"/>
                             <constraint firstItem="IQG-rw-aDQ" firstAttribute="centerY" secondItem="8m3-br-5fP" secondAttribute="centerY" id="oKI-eQ-WGT"/>
                             <constraint firstAttribute="trailing" secondItem="MTd-3W-iy8" secondAttribute="trailing" constant="40" id="ovC-tM-YvG"/>
                             <constraint firstAttribute="bottom" secondItem="MTd-3W-iy8" secondAttribute="bottom" constant="22" id="sFH-IC-kG8"/>
@@ -89,10 +90,10 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray3Color">
-            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

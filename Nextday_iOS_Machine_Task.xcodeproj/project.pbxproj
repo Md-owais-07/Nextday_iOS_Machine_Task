@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E921C0A12BD44B040005B624 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E921C0A02BD44B040005B624 /* LoginViewController.swift */; };
+		E921C0A32BD4E5F70005B624 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E921C0A22BD4E5F70005B624 /* LoginViewModel.swift */; };
 		E93EE3972BD13380009C7785 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93EE3962BD13380009C7785 /* AppDelegate.swift */; };
 		E93EE3992BD13380009C7785 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93EE3982BD13380009C7785 /* SceneDelegate.swift */; };
-		E93EE39B2BD13380009C7785 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93EE39A2BD13380009C7785 /* LoginViewController.swift */; };
 		E93EE39E2BD13380009C7785 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E93EE39D2BD13380009C7785 /* Base */; };
 		E93EE3A02BD13382009C7785 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E93EE39F2BD13382009C7785 /* Assets.xcassets */; };
 		E93EE3A32BD13382009C7785 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E93EE3A22BD13382009C7785 /* Base */; };
@@ -24,7 +25,6 @@
 		E93EE3BF2BD17662009C7785 /* ProductsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93EE3BE2BD17662009C7785 /* ProductsListViewModel.swift */; };
 		E93EE3C12BD18985009C7785 /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93EE3C02BD18985009C7785 /* AppController.swift */; };
 		E93EE3C92BD19E57009C7785 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93EE3C82BD19E57009C7785 /* DetailsVC.swift */; };
-		E93EE3E02BD1A951009C7785 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93EE3DF2BD1A951009C7785 /* LoginViewModel.swift */; };
 		E93EE3E22BD1AB25009C7785 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93EE3E12BD1AB25009C7785 /* DetailsViewModel.swift */; };
 		E9D8347E2BD3D389000DE824 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D8347D2BD3D389000DE824 /* String.swift */; };
 		E9D834812BD3D705000DE824 /* UiAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D834802BD3D705000DE824 /* UiAlertController.swift */; };
@@ -32,10 +32,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E921C0A02BD44B040005B624 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E921C0A22BD4E5F70005B624 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		E93EE3932BD13380009C7785 /* Nextday_iOS_Machine_Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nextday_iOS_Machine_Task.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E93EE3962BD13380009C7785 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E93EE3982BD13380009C7785 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E93EE39A2BD13380009C7785 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E93EE39D2BD13380009C7785 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E93EE39F2BD13382009C7785 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E93EE3A22BD13382009C7785 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,7 +52,6 @@
 		E93EE3BE2BD17662009C7785 /* ProductsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListViewModel.swift; sourceTree = "<group>"; };
 		E93EE3C02BD18985009C7785 /* AppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
 		E93EE3C82BD19E57009C7785 /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
-		E93EE3DF2BD1A951009C7785 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		E93EE3E12BD1AB25009C7785 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		E9D8347D2BD3D389000DE824 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		E9D834802BD3D705000DE824 /* UiAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiAlertController.swift; sourceTree = "<group>"; };
@@ -190,7 +190,7 @@
 		E93EE3D32BD1A644009C7785 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				E93EE3DF2BD1A951009C7785 /* LoginViewModel.swift */,
+				E921C0A22BD4E5F70005B624 /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -205,7 +205,7 @@
 		E93EE3D52BD1A655009C7785 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				E93EE39A2BD13380009C7785 /* LoginViewController.swift */,
+				E921C0A02BD44B040005B624 /* LoginViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -364,13 +364,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E93EE3B32BD15854009C7785 /* Model.swift in Sources */,
-				E93EE39B2BD13380009C7785 /* LoginViewController.swift in Sources */,
+				E921C0A12BD44B040005B624 /* LoginViewController.swift in Sources */,
 				E93EE3E22BD1AB25009C7785 /* DetailsViewModel.swift in Sources */,
 				E93EE3972BD13380009C7785 /* AppDelegate.swift in Sources */,
 				E93EE3BF2BD17662009C7785 /* ProductsListViewModel.swift in Sources */,
 				E93EE3AD2BD155DD009C7785 /* Constant.swift in Sources */,
 				E93EE3B52BD1619B009C7785 /* ProductsListViewController.swift in Sources */,
-				E93EE3E02BD1A951009C7785 /* LoginViewModel.swift in Sources */,
+				E921C0A32BD4E5F70005B624 /* LoginViewModel.swift in Sources */,
 				E9D834852BD3E1E5000DE824 /* UiImageView.swift in Sources */,
 				E93EE3992BD13380009C7785 /* SceneDelegate.swift in Sources */,
 				E93EE3B12BD156E8009C7785 /* ApiManager.swift in Sources */,
@@ -539,7 +539,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -571,7 +572,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

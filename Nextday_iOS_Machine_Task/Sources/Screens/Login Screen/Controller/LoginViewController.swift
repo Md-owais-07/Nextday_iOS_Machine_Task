@@ -1,25 +1,29 @@
 //
-//  ViewController.swift
+//  LoginTableViewController.swift
 //  Nextday_iOS_Machine_Task
 //
-//  Created by Mohammad Owais on 18/04/24.
+//  Created by Mohammad Owais on 21/04/24.
 //
 
 import UIKit
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
+class LoginViewController: UITableViewController, UITextFieldDelegate {
+    @IBOutlet weak var emailView: UIView!
     @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordView: UIView!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var lostButton: UIButton!
-    @IBOutlet weak var registerButtonSwitch: UIButton!
-    @IBOutlet weak var facebookButton: UIButton!
+    @IBOutlet weak var lodtButton: UIButton!
+    @IBOutlet weak var googleView: UIView!
     @IBOutlet weak var googleButton: UIButton!
-    @IBOutlet weak var emailView: UIView!
-    @IBOutlet weak var passwordView: UIView!
+    @IBOutlet weak var facebookView: UIView!
+    @IBOutlet weak var facebookButton: UIButton!
+    @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var hidePasswordButton: UIButton!
     
     var viewModel = ProductsListViewModel()
-    
+    var isPasswordVisible: Bool = false
+
     override func viewDidLoad() {
         super.viewDidLoad()
         emailTextField.delegate = self
@@ -31,10 +35,21 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         gradientColor(loginButton)
         textFieldStyle(emailView)
         textFieldStyle(passwordView)
-        
+        passwordTextField.isSecureTextEntry = true
     }
     
-    @IBAction func loginButtonpapped(_ sender: UIButton) 
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        let tableViewHeight = self.tableView.frame.height
+        let contentHeight = self.tableView.contentSize.height
+        
+        let centeringInset = (tableViewHeight - contentHeight) / 2.0
+        let topInset = max(centeringInset, 0.0)
+        
+        self.tableView.contentInset = UIEdgeInsets(top: topInset, left: 0.0, bottom: 0.0, right: 0.0)
+    }
+    
+    @IBAction func loginButtonTapped(_ sender: Any)
     {
         if let email = emailTextField.text, let password = passwordTextField.text
         {
@@ -60,13 +75,33 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     }
                 }
             }
-        } 
+        }
         else
         {
             openAlert(title: "Alert", message: "Please Enter Email and Password.", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{ _ in
                 print("Okay clicked!")
             }])
         }
+    }
+    
+    @IBAction func hidePasswordButtonTapped(_ sender: Any) 
+    {
+        isPasswordVisible.toggle()
+        let imageName = isPasswordVisible ? "eye.slash.fill" : "eye"
+        hidePasswordButton.setImage(UIImage(systemName: imageName), for: .normal)
+        passwordTextField.isSecureTextEntry = !isPasswordVisible
+    }
+    
+    @IBAction func googleButtonTapped(_ sender: Any) {
+        print("googleButtonTapped")
+    }
+    
+    @IBAction func facebookButtonTapped(_ sender: Any) {
+        print("facebookButtonTapped")
+    }
+    
+    @IBAction func registerButtonTapped(_ sender: Any) {
+        print("registerButtonTapped")
     }
     
 
